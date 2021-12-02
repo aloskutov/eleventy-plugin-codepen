@@ -1,0 +1,29 @@
+{
+  "name": "@aloskutov/eleventy-plugin-codepen",
+  "version": "1.0.0",
+  "description": "Eleventy codepen plugin",
+  "homepage": "https://github.com/aloskutov/eleventy-plugin-codepen",
+  "scripts": {
+    "test": "npx @11ty/eleventy --dry-run",
+    "watch": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aloskutov/eleventy-plugin-codepen.git"
+  },
+  "keywords": [
+    "11ty",
+    "11ty-plugin",
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": "Alex Loskutov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aloskutov/eleventy-plugin-codepen/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

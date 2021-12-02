@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/codepen.css" rel="stylesheet">
+  {% if codepen %}<link rel="preconnect" href="https://cpwebassets.codepen.io/">{% endif %}
+  <title>{{ title }}</title>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 20pt;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .codepen-resizable {
+    overflow: hidden;
+    resize: both;
+    background: white;
+    padding-bottom: 10px;
+  }
+.codepen-resizable iframe {
+    height: 100% !important;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    {{ content | safe }}
+  </div>
+  {% if codepen %}{% codepen_js %}{% endif %}
+  </body>
+</html>
