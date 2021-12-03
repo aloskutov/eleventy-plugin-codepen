@@ -2,6 +2,9 @@
   "name": "@aloskutov/eleventy-plugin-codepen",
   "version": "0.1.0",
   "description": "Eleventy codepen plugin",
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/aloskutov/eleventy-plugin-codepen",
   "scripts": {
     "test": "npx @11ty/eleventy --dryrun",
