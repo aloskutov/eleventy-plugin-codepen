@@ -1,17 +1,18 @@
-module.exports = (elConfig) => {
+module.exports = (eleventyConfig, options = {}) => {
 
   const defaultCodepen = {
     "tab": "result",    // active tab: result, css or html
     "height": "450",    // iframe height
     "theme": "",        // theme
     "class": "",         // "codepen-resizable" - for resize block
+    ...options
   };
 
-  elConfig.addShortcode("codepen_js", () => {
+  eleventyConfig.addShortcode("codepen_js", () => {
     return `<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>`;
   });
 
-  elConfig.addShortcode("codepen", (url, params = {}) => {
+  eleventyConfig.addShortcode("codepen", (url, params) => {
 
     let tmpUrl;
     try {
@@ -35,9 +36,6 @@ module.exports = (elConfig) => {
   });
 
   return {
-    dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    templateFormats: ["md", "njk"]
-  }
-}
+  };
+};
