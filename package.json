@@ -1,6 +1,6 @@
 {
   "name": "@aloskutov/eleventy-plugin-codepen",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Eleventy codepen plugin",
   "homepage": "https://github.com/aloskutov/eleventy-plugin-codepen",
   "scripts": {
