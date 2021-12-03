@@ -51,6 +51,6 @@ module.exports = (eleventyConfig, options = {}) => {
   });
 
   return {
-    markdownTemplateEngine: "njk",
+//    markdownTemplateEngine: "njk",
   };
 };
