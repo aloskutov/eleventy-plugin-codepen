@@ -22,7 +22,7 @@ module.exports = (eleventyConfig) => {
 
 ### Add CodePen js-library
 
-To add Codepen's javascript code to all pages, paste in the template (Nunjucks):
+To add Codepen's javascript code to all pages, paste in the template:
 
 ```html
 ...
@@ -31,7 +31,7 @@ To add Codepen's javascript code to all pages, paste in the template (Nunjucks):
 </html>
 ```
 
-To optionally add Codepen's javascript code to all pages, paste in the template (Nunjucks):
+To optionally add Codepen's javascript code to all pages, paste in the template:
 
 ```html
 ...
@@ -49,8 +49,9 @@ codepen: true
 ---
 
 ...
-{% codepen "pen-url", {options} %}
-...
+
+{% codepen "pen-url", '{"option":"value"}' %}
+
 ```
 
 
@@ -82,19 +83,24 @@ For example, custom style for resizable block:
 ```
 
 ```md
-{% codepen "some-pen-url-or-id", {style:"codepen-resizable"} %}
+{% codepen "some-pen-url-or-id", '{"style":"codepen-resizable"}' %}
 ```
 
 ### Notes
 
-If you are using markdown, be sure to add 11ty configuration option `markdownTemplateEngine: "njk",`
+**Liquid** & **Nunjucks** template:
 
-```js
-module.exports = (eleventyConfig, options = {}) => {
-    ...
-      return {
-          ...
-    markdownTemplateEngine: "njk",
-  };
-};
+```md
+{% codepen "some-pen-url-or-id", '{"height":500,"style":"codepen-resizable"}' %}
+
+or option string
+
+{% codepen "some-pen-url-or-id", "height:500,style:codepen-resizable" %}
+```
+
+**Nunjucks** template:
+
+```md
+{% codepen "some-pen-url-or-id", {height:500, style:"codepen-resizable"} %}
+
 ```

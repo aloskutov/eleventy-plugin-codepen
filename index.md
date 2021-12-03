@@ -7,14 +7,18 @@ codepen: true
 
 ## Height 650px, resizable, theme - light, active tabs - js & result
 
-{% codepen "https://codepen.io/ImagineProgramming/pen/OJxLvjd", {height:650, class:"codepen-resizable", theme: "light", tab:"js,result"} %}
+{% codepen "https://codepen.io/ImagineProgramming/pen/OJxLvjd", '{"height":650, "class":"codepen-resizable", "theme": "light", "tab":"js,result"}' %}
 
 ## Default
 
 {% codepen "https://codepen.io/alvaromontoro/pen/qBPWRrP" %}
 
-## Default with only slug, height 600px
+## Only slug, height 600px
 
-{% codepen "qBPWRrP", {height: 600} %}
+{% codepen "qBPWRrP", '{"height": 600}' %}
+
+## Slug, height 600px, light theme  & resizable (option string)
+
+{% codepen "qBPWRrP", 'height:600;theme:light;class:codepen-resizable' %}
 
 ***
