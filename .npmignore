@@ -2,6 +2,7 @@ _site
 _includes
 coverage
 test
+.github
 index.md
 .editorconfig
 .eleventyignore
