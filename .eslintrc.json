@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "google"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+      "max-len": [
+        "error", {
+          "ignoreStrings": true,
+          "ignoreUrls": true
+          }],
+      "strict": "warn"
+    }
+}

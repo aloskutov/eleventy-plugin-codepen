@@ -1,5 +1,9 @@
 _site
 _includes
+coverage
+test
 index.md
 .editorconfig
 .eleventyignore
+.eslintrc.json
+.c8rc

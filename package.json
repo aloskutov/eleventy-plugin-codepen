@@ -8,9 +8,10 @@
   "main": ".eleventy.js",
   "homepage": "https://github.com/aloskutov/eleventy-plugin-codepen",
   "scripts": {
-    "test": "npx @11ty/eleventy --dryrun",
-    "watch": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "test": "npx ava",
+    "coverage": " npx c8 --100 npm test",
+    "lint": "npx eslint ./src",
+    "demo": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,10 @@
     "url": "https://github.com/aloskutov/eleventy-plugin-codepen/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "ava": "^3.15.0",
+    "c8": "^7.10.0",
+    "eslint": "^8.5.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
