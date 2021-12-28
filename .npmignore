@@ -8,3 +8,4 @@ index.md
 .eleventyignore
 .eslintrc.json
 .c8rc
+package-lock.json
