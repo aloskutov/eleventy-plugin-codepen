@@ -24,7 +24,7 @@
     "eleventy-plugin"
   ],
   "author": "Alex Loskutov",
-  "license": "ISC",
+  "license": "MIT",
   "11ty": {
     "compatibility": ">=0.11"
   },
