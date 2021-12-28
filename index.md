@@ -19,6 +19,6 @@ codepen: true
 
 ## Slug, height 600px, light theme  & resizable (option string)
 
-{% codepen "qBPWRrP", 'height:600;theme:light;class:codepen-resizable' %}
+{% codepen "qBPWRrP", 'height:600;theme:light;class:codepen-resizable;insertJS:true' %}
 
 ***
