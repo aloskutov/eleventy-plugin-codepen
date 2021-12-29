@@ -1,4 +1,8 @@
 # eleventy-plugin-codepen
+![npm](https://img.shields.io/npm/v/@aloskutov/eleventy-plugin-codepen)
+![npms.io (quality)](https://img.shields.io/npms-io/maintenance-score/@aloskutov/eleventy-plugin-codepen)
+![npms.io (quality)](https://img.shields.io/npms-io/quality-score/@aloskutov/eleventy-plugin-codepen)
+![GitHub](https://img.shields.io/github/license/aloskutov/eleventy-plugin-codepen)
 
 Just another eleventy codepen plugin.
 
