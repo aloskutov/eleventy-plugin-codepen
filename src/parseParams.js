@@ -15,7 +15,7 @@ const parseParams = (params) => {
     } else {
       const tmpOpts = {};
       if (params.length > 0) {
-        params.split(';').map((option) => {
+        params.split(';').forEach((option) => {
           const [key, value] = option.split(':');
           tmpOpts[key] = value;
         });
