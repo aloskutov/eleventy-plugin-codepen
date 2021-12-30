@@ -22,8 +22,7 @@ const getCodepenHtml = (options, url) => {
     tmpUrl = new URL(url).pathname;
   } catch (e) {
     if (e instanceof TypeError) {
-      url = new URL('https://codepen.io//pen/' + url);
-      tmpUrl = url.pathname;
+      gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
     }
   }
 
@@ -39,7 +38,7 @@ const getCodepenHtml = (options, url) => {
 <span><a href="${url}">See the Pen </a></span></p>`;
 
   if (options.insertJS) {
-    code = code + '\n' + getCodepenJs();
+    code = `${code}\n${getCodepenJs()}`;
   }
 
   return code;
