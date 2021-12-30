@@ -10,21 +10,23 @@ const parseParams = (params = '') => {
     params = '';
   }
 
-  if (typeof params === `string` ) {
-    if ((params[0] === '{') && (params[params.length - 1] === '}')) {
-      params = JSON.parse(params);
+  let cleanParams = params;
+
+  if (typeof cleanParams === `string` ) {
+    if ((cleanParams[0] === '{') && (cleanParams[cleanParams.length - 1] === '}')) {
+      cleanParams = JSON.parse(cleanParams);
     } else {
       const tmpOpts = {};
-      if (params.length > 0) {
-        params.split(';').forEach((option) => {
+      if (cleanParams.length > 0) {
+        cleanParams.split(';').forEach((option) => {
           const [key, value] = option.split(':');
           tmpOpts[key] = value;
         });
       }
-      params = tmpOpts;
+      cleanParams = tmpOpts;
     }
   }
-  return params;
+  return cleanParams;
 };
 
 module.exports = parseParams;

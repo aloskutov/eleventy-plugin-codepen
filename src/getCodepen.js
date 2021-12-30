@@ -15,14 +15,23 @@ const getCodepenJs = () => {
  * @param {string} url url or id string
  * @return {string} html code string
  */
-const getCodepenHtml = (options, url) => {
-  let tmpUrl;
+const getCodepenHtml = (options = '', url = '') => {
+  if (options === '') {
+    throw new TypeError('Options undefined or empty!');
+  }
+  if (url === '') {
+    throw new TypeError('URL string undefined or empty!');
+  }
+
+  let tmpUrl = '';
+  let gotUrl = url;
 
   try {
-    tmpUrl = new URL(url).pathname;
+    tmpUrl = new URL(gotUrl).pathname;
   } catch (e) {
     if (e instanceof TypeError) {
       gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
+      tmpUrl = gotUrl.pathname;
     }
   }
 
@@ -35,7 +44,7 @@ const getCodepenHtml = (options, url) => {
   data-theme-id="${options.theme}"
   data-default-tab="${options.tab}"
   data-slug-hash="${id}">
-<span><a href="${url}">See the Pen </a></span></p>`;
+<span><a href="${gotUrl}">See the Pen </a></span></p>`;
 
   if (options.insertJS) {
     code = `${code}\n${getCodepenJs()}`;
