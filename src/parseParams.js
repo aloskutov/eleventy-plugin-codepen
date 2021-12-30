@@ -5,10 +5,11 @@
  * @param {string} params parameters string
  * @return {object} parsed parameters object
  */
-const parseParams = (params) => {
-  if (params === null || params === undefined) {
+const parseParams = (params = '') => {
+  if (params === null) {
     params = '';
   }
+
   if (typeof params === `string` ) {
     if ((params[0] === '{') && (params[params.length - 1] === '}')) {
       params = JSON.parse(params);
