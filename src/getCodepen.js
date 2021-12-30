@@ -36,7 +36,7 @@ const getCodepenHtml = (options = '', url = '') => {
   }
 
   const path = tmpUrl;
-  const id = path.split('/')[3];
+  const [, , , id] = path.split('/');
 
   let code = `<p class="codepen"
   data-class="${options.class}"
