@@ -1,6 +1,15 @@
 'use strict';
 
 /**
+ * Get Codepen JS code
+ * @return {string} codepen script code
+ */
+const getCodepenJs = () => {
+  const src = 'https://cpwebassets.codepen.io/assets/embed/ei.js';
+  return `<script async src="${src}"></script>`;
+};
+
+/**
  * Get Codepen HTML code
  * @param {array} options parameters array
  * @param {string} url url or id string
@@ -34,15 +43,6 @@ const getCodepenHtml = (options, url) => {
   }
 
   return code;
-};
-
-/**
- * Get Codepen JS code
- * @return {string} codepen script code
- */
-const getCodepenJs = () => {
-  const src = 'https://cpwebassets.codepen.io/assets/embed/ei.js';
-  return `<script async src="${src}"></script>`;
 };
 
 module.exports = {getCodepenHtml, getCodepenJs};
