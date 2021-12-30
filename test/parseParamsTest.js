@@ -14,8 +14,7 @@ test('Null', (t) => {
 });
 
 test('undefined', (t) => {
-  const params = undefined;
-  t.deepEqual(parseParams(params), {});
+  t.deepEqual(parseParams(), {});
 });
 
 test('JSON', (t) => {
