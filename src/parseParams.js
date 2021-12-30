@@ -6,11 +6,7 @@
  * @return {object} parsed parameters object
  */
 const parseParams = (params = '') => {
-  if (params === null) {
-    params = '';
-  }
-
-  let cleanParams = params;
+  let cleanParams = params !== null ? params : '';
 
   if (typeof cleanParams === `string` ) {
     if ((cleanParams[0] === '{') && (cleanParams[cleanParams.length - 1] === '}')) {
