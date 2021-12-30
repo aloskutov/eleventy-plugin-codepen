@@ -3,7 +3,10 @@
 ![npms.io (quality)](https://img.shields.io/npms-io/maintenance-score/@aloskutov/eleventy-plugin-codepen)
 ![npms.io (quality)](https://img.shields.io/npms-io/quality-score/@aloskutov/eleventy-plugin-codepen)
 ![GitHub](https://img.shields.io/github/license/aloskutov/eleventy-plugin-codepen)
+[![DeepScan grade](https://deepscan.io/api/teams/16410/projects/19673/branches/514386/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16410&pid=19673&bid=514386)
 
+[![DeepSource](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen.svg/?label=active+issues&show_trend=true&token=QqgB3VzCD1eg8QWoGUFYvV1j)](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen.svg/?label=resolved+issues&show_trend=true&token=QqgB3VzCD1eg8QWoGUFYvV1j)](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen/?ref=repository-badge)
 Just another eleventy codepen plugin.
 
 ## Usage
