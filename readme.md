@@ -7,6 +7,7 @@
 
 [![DeepSource](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen.svg/?label=active+issues&show_trend=true&token=QqgB3VzCD1eg8QWoGUFYvV1j)](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen/?ref=repository-badge)
 [![DeepSource](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen.svg/?label=resolved+issues&show_trend=true&token=QqgB3VzCD1eg8QWoGUFYvV1j)](https://deepsource.io/gh/aloskutov/eleventy-plugin-codepen/?ref=repository-badge)
+
 Just another eleventy codepen plugin.
 
 ## Usage
