@@ -1,13 +1,7 @@
 'use strict';
 
-/**
- * Get Codepen JS code
- * @return {string} codepen script code
- */
-const getCodepenJs = () => {
-  const src = 'https://cpwebassets.codepen.io/assets/embed/ei.js';
-  return `<script async src="${src}"></script>`;
-};
+const getCodepenJs = require('./getCodepenJs');
+const getSlugHash = require('./getSlugHash');
 
 /**
  * Get Codepen HTML code
@@ -15,35 +9,34 @@ const getCodepenJs = () => {
  * @param {string} url url or id string
  * @return {string} html code string
  */
-const getCodepenHtml = (options = '', url = '') => {
-  if (options === '') {
+const getCodepenHtml = (options, url) => {
+  if (!options) {
     throw new TypeError('Options undefined or empty!');
   }
-  if (url === '') {
+  if (!url) {
     throw new TypeError('URL string undefined or empty!');
   }
 
-  let tmpUrl = '';
   let gotUrl = url;
+  let tmpHash;
 
   try {
-    tmpUrl = new URL(gotUrl).pathname;
+    gotUrl = new URL(gotUrl);
   } catch (e) {
     if (e instanceof TypeError) {
+      tmpHash = gotUrl;
       gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
-      tmpUrl = gotUrl.pathname;
     }
   }
 
-  const path = tmpUrl;
-  const [, , , id] = path.split('/');
+  const slugHash = tmpHash ? tmpHash : getSlugHash(gotUrl.pathname);
 
   let code = `<p class="codepen"
   data-class="${options.class}"
   data-height="${options.height}"
   data-theme-id="${options.theme}"
   data-default-tab="${options.tab}"
-  data-slug-hash="${id}">
+  data-slug-hash="${slugHash}">
 <span><a href="${gotUrl}">See the Pen </a></span></p>`;
 
   if (options.insertJS) {
