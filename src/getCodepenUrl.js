@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * Get CodePen url
+ * @param {string} url url or slug hash
+ * @return {string} codepen url
+ */
 const getCodepenUrl = (url) => {
   let gotUrl = url;
 
