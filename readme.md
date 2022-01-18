@@ -15,7 +15,7 @@ Just another eleventy codepen plugin.
 ### Install via npm
 
 ```shell
-npm install --save-dev @aloskutov/eleventy-plugin-codepen
+npm install @aloskutov/eleventy-plugin-codepen
 ```
 
 ### Load plugin in `.eleventy.js`
