@@ -10,7 +10,7 @@
   "scripts": {
     "test": "npx ava",
     "coverage": " npx c8 --100 --src ./src npm test",
-    "lint": "npx eslint ./src",
+    "lint": "npx eslint ./src && npx jshint ./src",
     "demo": "npx @11ty/eleventy --serve"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "ava": "^4.0.1",
     "c8": "^7.11.0",
     "eslint": "^8.7.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "jshint": "^2.13.3"
   }
 }
