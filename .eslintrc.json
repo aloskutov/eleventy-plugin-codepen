@@ -1,21 +1,22 @@
 {
   "env": {
-      "browser": true,
-      "commonjs": true,
-      "es2021": true
+    "browser": false,
+    "commonjs": true,
+    "es2021": true
   },
   "extends": [
-      "google"
+    "google"
   ],
   "parserOptions": {
-      "ecmaVersion": 6
+    "ecmaVersion": 2018
   },
+  "ignorePatterns": ["*.config.js"],
   "rules": {
-    "max-len": [
-      "error", {
-        "ignoreStrings": true,
-        "ignoreUrls": true
-        }],
+    "max-len": ["error", {
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+      }],
     "strict": "warn"
   }
 }
