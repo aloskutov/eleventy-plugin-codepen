@@ -10,12 +10,8 @@ const getSlugHash = require('./getSlugHash');
  * @return {string} html code string
  */
 const getCodepenHtml = (options, url) => {
-  if (!options) {
-    throw new TypeError('Options undefined or empty!');
-  }
-  if (!url) {
-    throw new TypeError('URL string undefined or empty!');
-  }
+  if (!options) throw new TypeError('Options undefined or empty!');
+  if (!url) throw new TypeError('URL string undefined or empty!');
 
   let gotUrl = url;
   let tmpHash = '';
@@ -31,7 +27,7 @@ const getCodepenHtml = (options, url) => {
 
   const slugHash = tmpHash !== '' ? tmpHash : getSlugHash(gotUrl.pathname);
 
-  let code = `<p class="codepen"
+  const code = `<p class="codepen"
   data-class="${options.class}"
   data-height="${options.height}"
   data-theme-id="${options.theme}"
@@ -39,11 +35,7 @@ const getCodepenHtml = (options, url) => {
   data-slug-hash="${slugHash}">
 <span><a href="${gotUrl}">See the Pen </a></span></p>`;
 
-  if (options.insertJS) {
-    code = `${code}\n${getCodepenJs()}`;
-  }
-
-  return code;
+  return options.insertJS ? `${code}\n${getCodepenJs()}` : code;
 };
 
 module.exports = {getCodepenHtml, getCodepenJs};
