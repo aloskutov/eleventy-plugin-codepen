@@ -1,11 +1,13 @@
 _site
 _includes
+.github
 coverage
 test
-.github
-index.md
+.deepsource.toml
 .editorconfig
-.eleventyignore
 .eslintrc.json
-.c8rc
+.nycrc
+index.md
+.eleventyignore
+CODE_OF_CONDUCT.md
 package-lock.json
