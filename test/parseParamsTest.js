@@ -3,28 +3,22 @@
 const test = require('ava');
 const parseParams = require('../src/parseParams');
 
+
 test('Empty string', (t) => {
-  const params = '';
-  t.deepEqual(parseParams(params), {});
+  t.deepEqual(parseParams(''), {});
 });
 
 test('Null', (t) => {
-  const params = null;
-  t.deepEqual(parseParams(params), {});
+  t.deepEqual(parseParams(null), {});
 });
 
 test('undefined', (t) => {
   t.deepEqual(parseParams(), {});
 });
 
-test('JSON', (t) => {
+test('Object', (t) => {
   const params = {'height': 650, 'class': 'codepen-resizable', 'theme': 'light', 'tab': 'js,result'};
-  t.deepEqual(parseParams(params), {
-    'height': 650,
-    'class': 'codepen-resizable',
-    'theme': 'light',
-    'tab': `js,result`,
-  });
+  t.deepEqual(parseParams(params), params);
 });
 
 test('Parameters string', (t) => {
@@ -37,13 +31,8 @@ test('Parameters string', (t) => {
 });
 
 test('Parameters JSON string', (t) => {
-  const params = '{"height":650, "class":"codepen-resizable", "theme": "light", "tab":"js,result"}';
-  t.deepEqual(parseParams(params), {
-    'height': 650,
-    'class': 'codepen-resizable',
-    'theme': 'light',
-    'tab': `js,result`,
-  });
+  const params = {'height': 650, 'class': 'codepen-resizable', 'theme': 'light', 'tab': 'js,result'};
+  t.deepEqual(parseParams(JSON.stringify(params)), params);
 });
 
 test('Throw SyntaxError', (t) => {
