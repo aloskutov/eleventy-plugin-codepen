@@ -18,7 +18,7 @@ const getCodepenHtml = (options, url) => {
   }
 
   let gotUrl = url;
-  let tmpHash;
+  let tmpHash = '';
 
   try {
     gotUrl = new URL(gotUrl);
@@ -29,7 +29,7 @@ const getCodepenHtml = (options, url) => {
     }
   }
 
-  const slugHash = tmpHash ? tmpHash : getSlugHash(gotUrl.pathname);
+  const slugHash = tmpHash !== '' ? tmpHash : getSlugHash(gotUrl.pathname);
 
   let code = `<p class="codepen"
   data-class="${options.class}"
