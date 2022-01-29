@@ -6,7 +6,7 @@
  * @return {string}
  */
 const getSlugHash = (path) => {
-  const regex = /^\/(?<author>\w{0,127})\/(?<pen>\w{3})\/(?<slug>\w{1,127}).{0,127}$/;
+  const regex = /^\/(?<author>\w{0,127})\/(?<pen>\w{3})\/(?<slug>\w{1,127}).{0,127}$/u;
   const matches = regex.exec(path);
 
   return matches.groups.slug;

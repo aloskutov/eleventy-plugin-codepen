@@ -11,8 +11,12 @@ const getSlugHash = require('./getSlugHash');
  * @return {string} html code string
  */
 const getCodepenHtml = (options, url) => {
-  if (!options) throw new TypeError('Options undefined or empty!');
-  if (!url) throw new TypeError('URL string undefined or empty!');
+  if (!options) {
+    throw new TypeError('Options undefined or empty!');
+  }
+  if (!url) {
+    throw new TypeError('URL string undefined or empty!');
+  }
 
   const gotUrl = getCodepenUrl(url);
   const slugHash = getSlugHash(gotUrl.pathname);
