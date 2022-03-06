@@ -11,12 +11,10 @@ const getCodepenUrl = (url) => {
   try {
     gotUrl = new URL(gotUrl);
   } catch (e) {
-    if (e instanceof TypeError) {
-      gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
-    }
+    gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
   }
 
-  return gotUrl;
+  return gotUrl.href;
 };
 
 module.exports = getCodepenUrl;
