@@ -8,9 +8,10 @@
   "main": ".eleventy.js",
   "homepage": "https://github.com/aloskutov/eleventy-plugin-codepen",
   "scripts": {
-    "test": "npx ava",
-    "coverage": " npx c8 --100 --src ./src npm test",
-    "lint": "npx eslint ./src && npx jshint ./src",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "npx eslint ./src",
+    "jshint": "npx jshint ./src",
     "demo": "npx @11ty/eleventy --serve"
   },
   "repository": {
