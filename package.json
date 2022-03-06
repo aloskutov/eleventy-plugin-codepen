@@ -32,8 +32,6 @@
     "url": "https://github.com/aloskutov/eleventy-plugin-codepen/issues"
   },
   "devDependencies": {
-    "ava": "^4.0.1",
-    "c8": "^7.11.0",
     "eslint": "^8.10.0",
     "eslint-config-google": "^0.14.0",
     "jshint": "^2.13.4"
