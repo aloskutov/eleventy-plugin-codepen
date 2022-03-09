@@ -16,7 +16,7 @@ describe('Get codepen URL from URL', () => {
     {url: 'https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda', result: 'https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda'},
     {url: 'https://codepen.io/yyx990803/pen/XmZNOG', result: 'https://codepen.io/yyx990803/pen/XmZNOG'},
   ])('parseUrl($url)', ({url, result}) => {
-    expect(getCodepenUrl(url)).toMatch(result);
+    expect(getCodepenUrl(url).href).toMatch(result);
   });
 });
 
@@ -34,6 +34,6 @@ describe('Get codepen URL from Hash', () => {
     {url: 'LYpPWda', result: 'https://codepen.io//pen/LYpPWda'},
     {url: 'XmZNOG',  result: 'https://codepen.io//pen/XmZNOG'},
   ])('parseUrl($url) $result', ({url, result}) => {
-    expect(getCodepenUrl(url)).toMatch(result);
+    expect(getCodepenUrl(url).href).toMatch(result);
   });
 });
