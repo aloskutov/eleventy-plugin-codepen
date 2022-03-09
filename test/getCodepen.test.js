@@ -51,14 +51,11 @@ describe('Get codepen html', () => {
     expect(getCodepenHtml(options, slugHash)).toBe(result);
   });
 
-  test('Test #4 Throw Error empty options', () =>{
-    let option;
-    const url = 'https://codepen.io/gayane-gasparyan/pen/jOmaBQK';
-    expect(() => getCodepenHtml(option, url)).toThrow(TypeError);
+  test('Test #4 Throw Error empty options & url', () =>{
+    expect(() => getCodepenHtml()).toThrow(TypeError);
   });
 
   test('Test #5 Throw Error empty url', () =>{
-    let url;
-    expect(() => getCodepenHtml(options, url)).toThrow(TypeError);
+    expect(() => getCodepenHtml(options)).toThrow(TypeError);
   });
 });
