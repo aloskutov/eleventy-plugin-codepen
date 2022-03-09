@@ -27,7 +27,7 @@ const getCodepenHtml = (options, url) => {
   data-theme-id="${options.theme}"
   data-default-tab="${options.tab}"
   data-slug-hash="${slugHash}">
-<span><a href="${gotUrl}">See the Pen </a></span></p>`;
+  <span><a href="${gotUrl}">See the Pen </a></span></p>`;
 
   return options.insertJS ? `${code}\n${getCodepenJs()}` : code;
 };
