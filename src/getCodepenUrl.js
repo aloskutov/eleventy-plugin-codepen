@@ -14,7 +14,7 @@ const getCodepenUrl = (url) => {
     gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
   }
 
-  return gotUrl.href;
+  return gotUrl;
 };
 
 module.exports = getCodepenUrl;
