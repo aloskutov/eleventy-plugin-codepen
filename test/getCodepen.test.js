@@ -58,4 +58,17 @@ describe('Get codepen html', () => {
   test('Test #5 Throw Error empty url', () =>{
     expect(() => getCodepenHtml(options)).toThrow(TypeError);
   });
+
+  test('Test #6 with URL', () => {
+    const url = 'https://codepen.io/sdras/pen/PowKVyN/faca988359f13c8a98d2a6fe81ef43fa';
+    options.insertJS = false;
+    const result = `<p class="codepen"
+  data-class="${options.class}"
+  data-height="${options.height}"
+  data-theme-id="${options.theme}"
+  data-default-tab="${options.tab}"
+  data-slug-hash="PowKVyN">
+  <span><a href="${url}">See the Pen </a></span></p>`;
+    expect(getCodepenHtml(options, url)).toBe(result);
+  });
 });
