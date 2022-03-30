@@ -1,6 +1,6 @@
 {
   "name": "@aloskutov/eleventy-plugin-codepen",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Eleventy codepen plugin",
   "publishConfig": {
     "access": "public"
