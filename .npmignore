@@ -6,6 +6,7 @@ test
 .deepsource.toml
 .editorconfig
 .eslintrc.json
+.gitignore
 .jshintrc
 .nycrc
 index.md
