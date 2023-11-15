@@ -34,7 +34,7 @@ const isJSON = (str) => {
 const parseParams = (params) => {
   let cleanParams = params ? params : {};
 
-  if (typeof cleanParams === `string` ) {
+  if (typeof cleanParams === 'string' ) {
     cleanParams = isJSON(cleanParams) ?
       JSON.parse(cleanParams) :
       parseString(cleanParams);
