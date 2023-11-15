@@ -5,22 +5,41 @@ const { getCodepenUrl } = require('./getCodepenUrl');
 const { getPathParams } = require('./getPathParams');
 
 /**
- * Get Codepen HTML code
- * @param {array} options parameters array
- * @param {string} url url or id string
- * @return {string} html code string
+ * Сhecks for the presence of the necessary parameters
+ * @param {Object} options
+ * @param {String} url
  */
-const getCodepenHtml = (options, url) => {
+const checkParams = (options, url) => {
   if (!options) {
     throw new TypeError('Options undefined or empty!');
   }
   if (!url) {
     throw new TypeError('URL string undefined or empty!');
   }
+};
+
+/**
+ * Returns the string parameter data-user
+ * @param {string} user
+ * @returns string
+ */
+const getDataUser = (user) => {
+  return user ? `\n  data-user="${user}"` : '';
+};
+
+/**
+ * Get Codepen HTML code
+ * @param {array} options parameters array
+ * @param {string} url url or id string
+ * @return {string} html code string
+ */
+const getCodepenHtml = (options, url) => {
+
+  checkParams(options, url);
 
   const gotUrl = getCodepenUrl(url);
   const pathParams = getPathParams(gotUrl.pathname);
-  const dataUser = pathParams.user ? `\n  data-user="${pathParams.user}"` : ``;
+  const dataUser = getDataUser(pathParams.user);
 
 
   const code = `<p class="codepen"
@@ -34,4 +53,4 @@ const getCodepenHtml = (options, url) => {
   return options.insertJS ? `${code}\n${getCodepenJs()}` : code;
 };
 
-module.exports = {getCodepenHtml, getCodepenJs};
+module.exports = {getCodepenHtml};
