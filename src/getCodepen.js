@@ -1,8 +1,8 @@
 'use strict';
 
 const getCodepenJs = require('./getCodepenJs');
-const getCodepenUrl = require('./getCodepenUrl');
-const getSlugHash = require('./getSlugHash');
+const { getCodepenUrl } = require('./getCodepenUrl');
+const { getPathParams } = require('./getPathParams');
 
 /**
  * Get Codepen HTML code
