@@ -19,14 +19,16 @@ const getCodepenHtml = (options, url) => {
   }
 
   const gotUrl = getCodepenUrl(url);
-  const slugHash = getSlugHash(gotUrl.pathname);
+  const pathParams = getPathParams(gotUrl.pathname);
+  const dataUser = pathParams.user ? `\n  data-user="${pathParams.user}"` : ``;
+
 
   const code = `<p class="codepen"
   data-class="${options.class}"
   data-height="${options.height}"
   data-theme-id="${options.theme}"
   data-default-tab="${options.tab}"
-  data-slug-hash="${slugHash}">
+  data-slug-hash="${pathParams.hash}"${dataUser}>
   <span><a href="${gotUrl}">See the Pen </a></span></p>`;
 
   return options.insertJS ? `${code}\n${getCodepenJs()}` : code;
