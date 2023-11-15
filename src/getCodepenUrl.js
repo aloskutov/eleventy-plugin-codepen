@@ -6,7 +6,7 @@
  * @returns boolean
  */
 const hasHash = (hash) => {
-  const pattern = new RegExp(`^\\w{1,127}(?:\\/\\w{1,127}){0,1}$`,'u');
+  const pattern = new RegExp('^\\w{1,127}(?:\\/\\w{1,127}){0,1}$','u');
 
   return pattern.test(hash);
 };
@@ -17,7 +17,7 @@ const hasHash = (hash) => {
  * @returns boolean
  */
 const hasPath = (path) => {
-  const pattern = new RegExp(`^[\\w-]{1,127}\\/pen\\/\\w{1,127}(?:\\/\\w{1,127}){0,1}\\/{0,1}$`, 'ui');
+  const pattern = new RegExp('^[\\w-]{1,127}\\/pen\\/\\w{1,127}(?:\\/\\w{1,127}){0,1}\\/{0,1}$', 'ui');
 
   return pattern.test(path);
 };
