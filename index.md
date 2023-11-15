@@ -17,6 +17,10 @@ codepen: true
 
 {% codepen "qBPWRrP", '{"height": 600}' %}
 
+## Only path (author/pen/hash), height 600px
+
+{% codepen "alvaromontoro/pen/qBPWRrP", '{"height": 600}' %}
+
 ## Slug, height 600px, light theme  & resizable (option string)
 
 {% codepen "qBPWRrP", 'height:600;theme:light;class:codepen-resizable;insertJS:true' %}
