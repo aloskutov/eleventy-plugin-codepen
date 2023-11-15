@@ -1,8 +1,30 @@
 'use strict';
 
 /**
+ * Check the received hash
+ * @param {string} hash received hash
+ * @returns boolean
+ */
+const hasHash = (hash) => {
+  const pattern = new RegExp(`^\\w{1,127}(?:\\/\\w{1,127}){0,1}$`,'u');
+
+  return pattern.test(hash);
+};
+
+/**
+ * Check the received path
+ * @param {string} path received path
+ * @returns boolean
+ */
+const hasPath = (path) => {
+  const pattern = new RegExp(`^[\\w-]{1,127}\\/pen\\/\\w{1,127}(?:\\/\\w{1,127}){0,1}\\/{0,1}$`, 'ui');
+
+  return pattern.test(path);
+};
+
+/**
  * Get CodePen url
- * @param {string} url url or slug hash
+ * @param {string} url url or slug hash, or path (author/pen/hash)
  * @return {string} codepen url
  */
 const getCodepenUrl = (url) => {
@@ -11,10 +33,10 @@ const getCodepenUrl = (url) => {
   try {
     gotUrl = new URL(gotUrl);
   } catch (e) {
-    gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
+    gotUrl = hasPath(gotUrl) ? new URL(`https://codepen.io/${gotUrl}`) : new URL(`https://codepen.io//pen/${gotUrl}`);
   }
 
   return gotUrl;
 };
 
-module.exports = getCodepenUrl;
+module.exports = {getCodepenUrl, hasHash, hasPath};
