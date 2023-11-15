@@ -2,7 +2,7 @@
 
 const { getPathParams } = require('../src/getPathParams');
 
-describe('Get slug hash from codepen URL', () => {
+describe('Get slug hash from pathname', () => {
   test.each([
     {url: '/richpointofview/pen/WNXmNVd', result: 'WNXmNVd'},
     {url: '/isladjan/pen/abdyPBw', result: 'abdyPBw'},
@@ -16,12 +16,12 @@ describe('Get slug hash from codepen URL', () => {
     {url: '/soufiane-khalfaoui-hassani/pen/LYpPWda', result: 'LYpPWda'},
     {url: '/yyx990803/pen/XmZNOG', result: 'XmZNOG'},
     {url: '/sdras/pen/PowKVyN/faca988359f13c8a98d2a6fe81ef43fa', result: 'PowKVyN/faca988359f13c8a98d2a6fe81ef43fa'},
-  ])('getPathParams($url)', ({url, result}) => {
+  ])('getPathParams($url) $result', ({url, result}) => {
     expect(getPathParams(url).hash).toBe(result);
   });
 });
 
-describe('Get user from codepen URL', () => {
+describe('Get user from pathname', () => {
   test.each([
     { url: '/richpointofview/pen/WNXmNVd', result: 'richpointofview' },
     { url: '/isladjan/pen/abdyPBw', result: 'isladjan' },
@@ -34,7 +34,7 @@ describe('Get user from codepen URL', () => {
       url: '/sdras/pen/PowKVyN/faca988359f13c8a98d2a6fe81ef43fa',
       result: 'sdras'
     }
-  ])('getPathParams($url)', ({ url, result }) => {
+  ])('getPathParams($url) $result', ({ url, result }) => {
     expect(getPathParams(url).user).toBe(result);
   });
 });
