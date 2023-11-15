@@ -19,13 +19,13 @@ module.exports = (eleventyConfig, options = {}) => {
   });
 
   eleventyConfig.addShortcode("codepen", (url, params) => {
-    const options = Object.assign(
+    const codepenOptions = Object.assign(
       {},
       defaultCodepen,
       parseParams(params)
     );
 
-    return getCodepenHtml(options, url);
+    return getCodepenHtml(codepenOptions, url);
   });
 
   return {
