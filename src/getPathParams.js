@@ -6,7 +6,7 @@
  * @return {string}
  */
 const getPathParams = (path) => {
-  const regex = /^\/(?<user>[\w\u002d]{0,127})\/pen\/(?<slug>\w{1,127})(?<hash>\/\w{1,127}){0,1}$/ui;
+  const regex = /^\/(?<user>[\w\u002d]{0,127})\/pen\/(?<slug>\w{1,127})(?<hash>\/\w{1,127}){0,1}\/{0,1}$/ui;
   const matches = regex.exec(path);
 
   return {
