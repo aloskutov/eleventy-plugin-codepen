@@ -1,8 +1,6 @@
-'use strict';
-
-const getCodepenJs = require('./getCodepenJs');
-const getCodepenUrl = require('./getCodepenUrl');
-const getSlugHash = require('./getSlugHash');
+import getCodepenJs from './getCodepenJs.js';
+import getCodepenUrl from './getCodepenUrl.js';
+import getSlugHash from './getSlugHash.js';
 
 /**
  * Get Codepen HTML code
@@ -10,7 +8,7 @@ const getSlugHash = require('./getSlugHash');
  * @param {string} url url or id string
  * @return {string} html code string
  */
-const getCodepenHtml = (options, url) => {
+export default (options, url) => {
   if (!options) {
     throw new TypeError('Options undefined or empty!');
   }
@@ -31,5 +29,3 @@ const getCodepenHtml = (options, url) => {
 
   return options.insertJS ? `${code}\n${getCodepenJs()}` : code;
 };
-
-module.exports = {getCodepenHtml, getCodepenJs};

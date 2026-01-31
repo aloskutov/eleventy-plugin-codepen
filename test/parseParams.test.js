@@ -1,6 +1,4 @@
-'use strict';
-
-const parseParams = require('../src/parseParams');
+import parseParams from '../src/parseParams.js';
 
 describe('Test #1. Parse empty params', () => {
   test.each([

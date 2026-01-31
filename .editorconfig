@@ -15,5 +15,5 @@ insert_final_newline = true
 insert_final_newline = false
 indent_size = 2
 
-[*.{js,yml}]
+[*.{js,cjs,mjs,yml}]
 indent_size = 2

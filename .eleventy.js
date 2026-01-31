@@ -1,9 +1,8 @@
-'use strict';
+import parseParams from './src/parseParams.js';
+import getCodepenHtml from './src/getCodepen.js';
+import getCodepenJs from './src/getCodepenJs.js';
 
-const parseParams = require('./src/parseParams');
-const {getCodepenHtml, getCodepenJs} = require('./src/getCodepen');
-
-module.exports = (eleventyConfig, options = {}) => {
+export default (eleventyConfig, options = {}) => {
 
   const defaultCodepen = {
     'tab': 'result',
@@ -14,11 +13,11 @@ module.exports = (eleventyConfig, options = {}) => {
     ...options
   };
 
-  eleventyConfig.addShortcode("codepen_js", () => {
+  eleventyConfig.addShortcode('codepen_js', () => {
     return getCodepenJs();
   });
 
-  eleventyConfig.addShortcode("codepen", (url, params) => {
+  eleventyConfig.addShortcode('codepen', (url, params) => {
     const codepenOptions = Object.assign(
       {},
       defaultCodepen,

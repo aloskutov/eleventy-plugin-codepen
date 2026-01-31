@@ -1,6 +1,5 @@
-'use strict';
 
-const getCodepenUrl = require('../src/getCodepenUrl');
+import getCodepenUrl from '../src/getCodepenUrl.js';
 
 describe('Get codepen URL from URL', () => {
   test.each([
