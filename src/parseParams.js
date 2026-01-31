@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Parse param string
  * @param {string} str

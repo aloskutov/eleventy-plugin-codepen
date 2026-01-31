@@ -1,5 +1,3 @@
-'use strict';
-
 const getCodepenJs = require('./getCodepenJs');
 const getCodepenUrl = require('./getCodepenUrl');
 const getSlugHash = require('./getSlugHash');

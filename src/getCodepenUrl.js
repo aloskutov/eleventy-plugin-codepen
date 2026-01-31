@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Get CodePen url
  * @param {string} url url or slug hash
@@ -11,6 +9,7 @@ const getCodepenUrl = (url) => {
   try {
     gotUrl = new URL(gotUrl);
   } catch (e) {
+    console.error(e);
     gotUrl = new URL(`https://codepen.io//pen/${gotUrl}`);
   }
 

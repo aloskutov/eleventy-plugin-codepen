@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Get Codepen JS code
  * @return {string} codepen script code

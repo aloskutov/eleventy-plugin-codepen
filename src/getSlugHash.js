@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Get slug hash from path
  * @param {string} path
