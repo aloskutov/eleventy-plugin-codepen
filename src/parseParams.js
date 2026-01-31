@@ -3,7 +3,7 @@
  * @param {string} str
  * @return {object}
  */
-const parseString = (str) => {
+export const parseString = (str) => {
   const options = {};
 
   str.split(';').forEach((pair) => {
@@ -19,7 +19,7 @@ const parseString = (str) => {
  * @param {string} str
  * @return {boolean}
  */
-const isJSON = (str) => {
+export const isJSON = (str) => {
   const cleanStr = str.trim();
   return (cleanStr[0] === '{') && (cleanStr[cleanStr.length -1] === '}');
 };
@@ -29,7 +29,7 @@ const isJSON = (str) => {
  * @param {string} params parameters string
  * @return {object} parsed parameters object
  */
-const parseParams = (params) => {
+export default (params) => {
   let cleanParams = params ? params : {};
 
   if (typeof cleanParams === 'string' ) {
@@ -39,5 +39,3 @@ const parseParams = (params) => {
   }
   return cleanParams;
 };
-
-module.exports = parseParams;

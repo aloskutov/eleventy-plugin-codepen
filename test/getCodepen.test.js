@@ -1,6 +1,4 @@
-'use strict';
-
-const { getCodepenHtml } = require('../src/getCodepen');
+import getCodepenHtml from '../src/getCodepen.js';
 
 const options = {
   'tab': 'result',

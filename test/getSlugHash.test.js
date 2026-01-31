@@ -1,6 +1,5 @@
-'use strict';
 
-const getSlugHash = require('../src/getSlugHash');
+import getSlugHash from '../src/getSlugHash.js';
 
 describe('Get slug hash from codepen URL', () => {
   test.each([

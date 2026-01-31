@@ -1,6 +1,4 @@
-'use strict';
-
-const getCodepenJs = require('../src/getCodepenJs');
+import getCodepenJs from '../src/getCodepenJs';
 const codeString = '<script async src="https://public.codepenassets.com/embed/index.js"></script>';
 
 describe('Get codepen JS', () => {
