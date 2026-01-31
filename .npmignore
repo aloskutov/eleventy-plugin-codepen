@@ -13,3 +13,5 @@ index.md
 .eleventyignore
 CODE_OF_CONDUCT.md
 package-lock.json
+jest.config.cjs
+eslint.config.mjs
