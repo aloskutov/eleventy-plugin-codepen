@@ -18,12 +18,12 @@ Just another eleventy codepen plugin.
 npm install @aloskutov/eleventy-plugin-codepen
 ```
 
-### Load plugin in `.eleventy.js`
+### Load plugin in `.eleventy.js` as ESM
 
 ```js
-const codepen = require("@aloskutov/eleventy-plugin-codepen");
+import codepen from "@aloskutov/eleventy-plugin-codepen";
 
-module.exports = (eleventyConfig) => {
+export default function (eleventyConfig) => {
     eleventyConfig.addPlugin(codepen);
 };
 ```
