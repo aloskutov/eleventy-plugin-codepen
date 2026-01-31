@@ -48,7 +48,7 @@ describe('Get codepen html', () => {
   data-default-tab="${options.tab}"
   data-slug-hash="${slugHash}">
   <span><a href="${url}">See the Pen </a></span></p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>`;
+<script async src="https://public.codepenassets.com/embed/index.js"></script>`;
     expect(getCodepenHtml(options, slugHash)).toBe(result);
   });
 
